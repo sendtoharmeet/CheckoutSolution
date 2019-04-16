@@ -1,6 +1,8 @@
-﻿using BusinessLayer;
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CheckoutSystem
 {
@@ -8,15 +10,6 @@ namespace CheckoutSystem
     {
         static void Main(string[] args)
         {
-            var checkoutCart = new CheckOut();
-            checkoutCart.ProcessDiscountRules();
-            checkoutCart.CheckoutItem(1); //A
-            checkoutCart.CheckoutItem(2); //B
-
-            var finalPrice = checkoutCart.Orders.Select(x => x.PriceApplied).Sum();
-
-            Console.WriteLine(finalPrice);
-            Console.ReadLine();
         }
     }
 }
